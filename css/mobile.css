@@ -55,6 +55,7 @@
 	}
 	.explore{
 		background-color: transparent;
+		border-bottom: none;
 	}
 	.people__user{
 		border: none;
