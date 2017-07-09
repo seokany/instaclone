@@ -106,7 +106,7 @@
 	
 }
 
-.fa-heart-o {
+.fa-heart {
 	animation: .5s pump infinite linear;
 }
 
@@ -117,7 +117,7 @@
 	 }
 	 to {
 	 	transform: scale(1.1, 1.1);
-	 	color: yellow;
+	 	color: violet;
 	 }
 }
 
