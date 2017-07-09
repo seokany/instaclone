@@ -27,10 +27,29 @@
 // 	console.log("god");
 // }
 $(document).ready(function(){
-	var $heart = $('.heart');
 
-	$heart.click(function() {
-		$(this).toggleClass('fa-heart-o fa-heart')
+	var $heart = $('.heart'),
+		$addComment = $('.photo__add-comment');
+
+	$heart.click(function(){
+		$(this).toggleClass('fa-heart-o fa-heart');
+	});
+
+	$addComment.keydown(function(event){
+		// Detect if the key is enter
+		if(event.keyCode == 13){
+			// save the textarea;s value
+			// console.log('pressed enter', event.target.value)
+			var newComment = event.target.value;
+			// select the comment list above textarea
+			// console.log($(this).parent().parent().children('.photo__comments'))
+			var commentList = $(this).parent().parent().children('.photo__comments');
+			commentList.append('<p>hello</p>')
+			// Empty the value of textarea
+			$(this).val('').blur();
+			// Append a <li> to photo__comments.
+			commentList.append("<li class='photo__comment'><span class='photo__comment-author'>serranoarevalo</span>" + newComment + "</li>");
+		}
 	})
-})
 
+})
