@@ -1,0 +1,135 @@
+#feed{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	max-width: none;
+	
+}
+.photo{
+	max-width: 600px; /*max로 안했을시 vp적용시 사진크기보정안됨*/
+	background-color: white;
+	border: 1px solid #e6e6e6;
+	box-sizing: border-box;
+	border-radius: 3px;
+	margin-bottom: 60px;
+}
+
+.photo: last-child{
+	margin-bottom: 0;
+}
+
+.photo__header{
+	padding: 15px;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+}
+
+.photo__avatar{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	margin-right: 10px; 
+	animation: 1.5s crazysongRotates infinite linear
+}
+
+@keyframes crazysongRotates{
+	from {
+		transform: rotate(0turn);
+		 }
+		to {
+			transform: rotate(1turn);
+		}
+	
+}
+
+
+.photo__author{
+	display: block;
+	font-weight: 600;
+	margin-bottom: 3px;
+
+}
+
+.photo__image{
+	max-width: 100%;
+}
+
+.photo__main{
+	padding-left: 12px;
+}
+.photo__actions {
+	cursor: pointer;
+}
+.photo__actions i{
+	
+	margin-bottom:8px; 
+	margin-top:8px;
+}
+.photo__actions i2{
+ 	margin-left: 8px;
+}
+.photo__likes {
+	display: block;
+	font-weight: 600;	
+	margin-bottom: 10px;
+}
+.photo__date {
+	display: block;
+	margin-top: 4px;
+	color: 
+}
+.photo__comment-author {
+	font-weight: 600;
+	margin-right: 2px;
+}
+.photo__add-comment-container {
+	position: relative;
+}
+
+.photo__add-comment-container textarea{
+	
+	width: 90%;
+	padding-top: 10px;
+	box-sizing: border-box;
+	border: none;
+	border-top: 1px solid #e6e6e6;
+	resize: none;
+	margin-top: 10px;
+	 
+	font-weight: 700;
+}
+.photo__add-comment-container i{
+	position: absolute;
+	top: 25px;
+	
+}
+
+.fa-heart-o {
+	animation: .5s pump infinite linear;
+}
+
+@keyframes pump {
+	from { 
+		transform: none;
+		color: black;
+	 }
+	 to {
+	 	transform: scale(1.1, 1.1);
+	 	color: yellow;
+	 }
+}
+
+.photo__add-comment-container textarea:focus{
+	outline: none;
+}
+
+
+
+
+
+
+
+
+

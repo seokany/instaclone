@@ -1,0 +1,32 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+}
+
+main,
+footer{
+	max-width: 900px;
+}
+
+a {
+	color: #003569;
+}
+
+input:focus{
+	outline: none;
+}
+
+main{
+	margin-top: 60px;
+	animation: .5s fadeMain linear;
+}
+@keyframes fadeMain {
+	from{
+		transform: translateY(10px);
+		opacity: 0;
+	}
+	to {
+		transform: none;
+		opacity: 1;
+	}
+}
