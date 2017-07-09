@@ -32,7 +32,22 @@ $(document).ready(function(){
 		$addComment = $('.photo__add-comment');
 
 	$heart.click(function(){
-		$(this).toggleClass('fa-heart-o fa-heart');
+		// if($(this).hasClass('fa-heart-o')){
+		// 	console.log("+1")
+		// } else {
+		// 	console.log("-1")
+		// }
+		// $(this).toggleClass('fa-heart-o fa-heart');
+		var likes = $(this).parent().parent().children('.photo__likes').children('.photo__likes-number'),
+			likesNumber = parseInt(likes.html()),
+			newValue
+			if($(this).hasClass('fa-heart-o')){
+				newValue = likesNumber + 1;
+			} else{
+				newValue = likesNumber - 1;
+			}
+			likes.html(newValue)
+			$(this).toggleClass('fa-heart-o fa-heart');
 	});
 
 	$addComment.keydown(function(event){
