@@ -29,7 +29,11 @@
 $(document).ready(function(){
 
 	var $heart = $('.heart'),
-		$addComment = $('.photo__add-comment');
+		$addComment = $('.photo__add-comment'),
+		$ellipsis = $('.fa-ellipsis-h'),
+		$popUp = $('.popUp'),
+		$closePopup = $('fa-times'),
+		$closePopUpBtn = $('.closePopUpBtn');
 
 	$heart.click(function(){
 		// if($(this).hasClass('fa-heart-o')){
@@ -66,5 +70,16 @@ $(document).ready(function(){
 			commentList.append("<li class='photo__comment'><span class='photo__comment-author'>serranoarevalo</span>" + newComment + "</li>");
 		}
 	})
+	$ellipsis.click(function(){
+		$popUp.fadeIn();
+	})
+
+	$closePopup.click(closePopup);
+	$closePopUpBtn.click(closePopup);
+
+	function closePopup(event) {
+		event.preventDefault()
+		$popUp.fadeOut();
+	}
 
 })
